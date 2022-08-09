@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 mongoose.connect(process.env.MONGO_URI);
 
 const personSchema = new Schema({
-  name: {type: String, required: true},
-  age: Number ,
-  favoriteFood : [String]
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String]
 });
 
-let Person = mongoose.model("Person", personSchema);
+const Person = mongoose.model("Person", personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
